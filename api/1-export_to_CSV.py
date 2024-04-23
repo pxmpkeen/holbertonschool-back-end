@@ -14,7 +14,7 @@ if __name__ == '__main__':
     formatted_str = "\"{:d}\",\"{}\",\"{}\",\"{}\"\n"
 
     user_id = int(sys.argv[1])
-    user_name = requests.get(user_name_url.format(user_id)).json().get("name")
+    user_name = requests.get(user_name_url.format(user_id)).json().get("username")
     todos = requests.get(todos_url.format(user_id)).json()
 
     titles = [
